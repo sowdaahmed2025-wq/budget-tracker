@@ -45,3 +45,104 @@ input {
   color: #888;
   font-style: italic;
 }
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #c9b8a8;
+  text-align: left;
+}
+
+th {
+  background-color: #e67e22;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #fff3e8;
+}
+
+/* Form styling */
+label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+select {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1e8449;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Collapsible section */
+.how-to {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.how-to summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Row hover */
+tr:hover {
+  background-color: #f9d7b5;
+}
+
+/* Advanced selectors */
+
+/* Descendant selector */
+#your-expenses td {
+  font-size: 0.95rem;
+}
+
+/* Direct child selector */
+#expense-form > input {
+  border: 1px solid #7f8c8d;
+  border-radius: 4px;
+}
+
+/* Negation pseudo-class */
+input:not([type="submit"]) {
+  background-color: #ffffff;
+}
+
+/* Focus state */
+input:focus,
+select:focus {
+  outline: none;
+  border: 2px solid #27ae60;
+  background-color: #f0fff4;
+}
