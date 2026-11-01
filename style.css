@@ -1,0 +1,47 @@
+/* Element selectors */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #2c3e50;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* ID selectors: each section looks different */
+#add-expense {
+  background-color: #dff3e4;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  border-radius: 8px;
+}
+
+#your-expenses {
+  background-color: #fde8d7;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  border-radius: 8px;
+}
+
+/* Class selector */
+.placeholder-text {
+  color: #888;
+  font-style: italic;
+}
