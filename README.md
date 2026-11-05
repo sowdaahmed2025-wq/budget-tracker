@@ -1,33 +1,59 @@
-# Personal Budget & Expense Tracker
+# Budget Tracker: Visual Design
 
-A static Budget Tracker page built with plain HTML and CSS (Week 2). It doesn't calculate or respond to clicks yet. JavaScript comes in later weeks.
+This project is a Budget Tracker web page. This week I improved its visual design using CSS only. No new functionality was added, and the only HTML change was a `<header>` wrapper around the logo, title, and tagline so the page heading could appear as a card.
 
 ## Files
 
-- index.html: the page structure
-- style.css: the styling
-- logo.svg: the coin logo next to the heading
+- `index.html`: the page structure
+- `style.css`: all the styling
+- `logo.svg`: the logo
+- `README.md`: this file
 
-## What I built
+## Color palette
 
-### 1. Expense table
-A table with a header row (`<thead>`, `<th>`) and 5 sample rows (`<tbody>`, `<td>`). It is styled with `border-collapse`, cell padding, a colored header, and alternating row colors using `tr:nth-child(even)`.
+The colors are stored as CSS variables in `:root` at the top of `style.css`, so the same colors are used consistently across the page.
 
-### 2. Upgraded Add Expense form
-The inputs are inside a `<form>`. Category is a `<select>` dropdown with 5 options (Food, Transport, Rent, Entertainment, Other). Every input has a unique `id` and a `<label>` linked with a matching `for` attribute. The "Add Expense" button uses `type="button"` and does nothing yet.
+| Variable | Color | Used for |
+|---|---|---|
+| `--primary` | #27ae60 | Buttons, input focus border |
+| `--primary-dark` | #1e8449 | Button hover |
+| `--heading` | #2c3e50 | Headings, table header |
+| `--background` | #f4f4f9 | Page background |
+| `--card` | #ffffff | Card and input backgrounds |
+| `--text` | #333333 | Body text |
+| `--border` | #dfe3e8 | Borders on cards, inputs, and table cells |
+| `--row-alt` | #eef7f1 | Alternating table rows, input focus background |
 
-### 3. Multimedia
-- An `<img>` logo with `src`, `alt`, `width` and `height`.
-- A YouTube budgeting video in an `<iframe>` with `width`, `height`, `title` and `frameborder`.
+## Typography
 
-### 4. Interactive elements
-- A collapsible "How to use this tracker" section using `<details>` and `<summary>`.
-- A `:hover` style on table rows.
-- `cursor: pointer` on the button.
+Fonts come from Google Fonts and are linked in the `<head>` of `index.html`.
 
-### 5. Advanced CSS selectors
-- Descendant selector: `#your-expenses td`
-- Direct child selector: `#expense-form > input`
-- Position-based pseudo-class: `tr:nth-child(even)`
-- Negation pseudo-class: `input:not([type="submit"])`
-- Focus state: `input:focus`
+- **Poppins** is used for headings (h1, h2, h3).
+- **Inter** is used for body text.
+- Inputs, labels, buttons, and table cells use `font-family: inherit` so they match the rest of the page.
+
+The pairing gives a clear visual hierarchy: a bold, rounded heading font with a clean, readable body font.
+
+## Table and form styling
+
+**Expense table**
+- Navy header row with white text
+- Padding inside every cell
+- Light borders for structure
+- Light green alternating rows to make rows easier to follow
+- Hover color on rows
+
+**Add Expense form**
+- Inputs and the category dropdown have padding, a light border, and rounded corners
+- A green border and light green background appear when an input is focused
+- The Add Expense button is green with rounded corners and darkens on hover
+
+## CSS Box Model
+
+- **Margin** separates the cards from each other.
+- **Padding** creates space inside each card.
+- **Border** defines the edge of each card.
+- **Border-radius** (8px on cards, 6px on inputs and buttons) gives a softer, modern look.
+- `box-sizing: border-box` is applied to all elements so widths stay predictable.
+
+The page heading, the Add Expense form, and the Expense table each appear as a separate white card on a light gray background.
